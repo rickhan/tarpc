@@ -109,6 +109,10 @@ required-features = ["serde1", "tokio1", "serde-transport"]
 name = "tls_over_tcp"
 required-features = ["full"]
 
+[[example]]
+name = "bidirectional"
+required-features = ["serde-transport", "tcp"]
+
 [[test]]
 name = "service_functional"
 required-features = ["serde-transport"]
@@ -116,3 +120,7 @@ required-features = ["serde-transport"]
 [[test]]
 name = "dataservice"
 required-features = ["serde-transport", "tcp"]
+
+[[test]]
+name = "mux"
+required-features = ["serde-transport"]

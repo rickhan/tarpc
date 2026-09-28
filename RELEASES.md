@@ -1,3 +1,12 @@
+## Unreleased
+
+### New Features
+
+- New `mux` module (feature `serde-transport`) that multiplexes any number of services, in both
+  directions, over one connection. Each side can `listen` on named services and `connect` to the
+  peer's services, enabling server-to-client RPCs and multiple service instances per connection.
+  See `examples/bidirectional.rs`.
+
 ## tarpc 0.37.0 (2025-08-10)
 
 ### Breaking Changes

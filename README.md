@@ -62,6 +62,10 @@ Some other features of tarpc:
 - Serde serialization: enabling the `serde1` Cargo feature will make service requests and
   responses `Serialize + Deserialize`. It's entirely optional, though: in-memory transports can
   be used, as well, so the price of serialization doesn't have to be paid when it's not needed.
+- Bidirectional, multiplexed connections: with the `serde-transport` feature, [`mux`](https://docs.rs/tarpc/latest/tarpc/mux/) carries
+  any number of services in both directions over a single connection, so the side that accepted
+  a connection can call RPCs on the side that initiated it. Multiple instances of a service are
+  served under different names.
 
 ## Usage
 Add to your `Cargo.toml` dependencies:
